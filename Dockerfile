@@ -10,10 +10,11 @@ WORKDIR /bedrock
 
 # Download Bedrock Dedicated Server
 COPY bedrock-server-1.21.84.1.zip .
-COPY script.sh .
 
 RUN unzip bedrock-server-1.21.84.1.zip && \
-    rm bedrock-server-1.21.84.1.zip && \
+    rm bedrock-server-1.21.84.1.zip &&
+
+COPY script.sh .
 
 # Accept EULA
 RUN echo "eula=true" > eula.txt
