@@ -20,7 +20,7 @@ RUN echo "eula=true" > eula.txt
 # Expose default MCPE port
 EXPOSE 62025/udp
 
-COPY script.sh .
+ADD script.sh .
 
 # Start server
 CMD ["./script.sh"]
