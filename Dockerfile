@@ -13,13 +13,14 @@ COPY bedrock-server-1.21.84.1.zip .
 
 RUN unzip bedrock-server-1.21.84.1.zip && rm bedrock-server-1.21.84.1.zip
 
-COPY script.sh .
 
 # Accept EULA
 RUN echo "eula=true" > eula.txt
 
 # Expose default MCPE port
 EXPOSE 62025/udp
+
+COPY script.sh .
 
 # Start server
 CMD ["./script.sh"]
