@@ -9,18 +9,15 @@ RUN apt-get update && \
 WORKDIR /bedrock
 
 # Download Bedrock Dedicated Server
-COPY bedrock-server-1.21.84.1.zip .
+COPY . .
 
 RUN unzip bedrock-server-1.21.84.1.zip && rm bedrock-server-1.21.84.1.zip
-
 
 # Accept EULA
 RUN echo "eula=true" > eula.txt
 
 # Expose default MCPE port
 EXPOSE 62025/udp
-
-ADD script.sh .
 
 # Start server
 CMD ["./script.sh"]
