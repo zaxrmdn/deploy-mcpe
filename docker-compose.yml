@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mcpe:
+    build: .
+    container_name: mcpe-server
+    ports:
+      - "62025:62025/udp"
+    volumes:
+      - ./data:/bedrock
+    restart: unless-stopped
