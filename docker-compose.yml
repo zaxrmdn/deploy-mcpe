@@ -7,5 +7,8 @@ services:
     ports:
       - "62025:62025/udp"
     volumes:
-      - ./data:/bedrock
+      - mcpe-data:/bedrock
     restart: unless-stopped
+
+volumes:
+  mcpe-data:
