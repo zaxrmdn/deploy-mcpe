@@ -35,9 +35,9 @@ WORKDIR /bedrock
 
 # Download Bedrock Dedicated Server
 
-RUN curl -o bedrock-server.zip https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.84.1.zip \ 
-    unzip bedrock-server.zip && \
-    rm bedrock-server.zip && \
+RUN wget https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.84.1.zip \ 
+    unzip bedrock-server-1.21.84.1.zip && \
+    rm bedrock-server-1.21.84.1.zip && \
     chmod +x bedrock_server
 
 # Accept EULA
