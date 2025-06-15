@@ -9,7 +9,7 @@ RUN apt-get update && \
 WORKDIR /bedrock
 
 # Download Bedrock Dedicated Server
-COPY bedrock-server-1.21.84.1.zip ,
+COPY bedrock-server-1.21.84.1.zip .
 
 RUN unzip bedrock-server-1.21.84.1.zip && \
     rm bedrock-server-1.21.84.1.zip && \
