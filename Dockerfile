@@ -34,9 +34,9 @@ RUN apt-get update && \
 WORKDIR /bedrock
 
 # Download Bedrock Dedicated Server
+COPY bedro
 
-RUN wget https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.84.1.zip \ 
-    unzip bedrock-server-1.21.84.1.zip && \
+RUN unzip bedrock-server-1.21.84.1.zip && \
     rm bedrock-server-1.21.84.1.zip && \
     chmod +x bedrock_server
 
