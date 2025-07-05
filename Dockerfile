@@ -11,8 +11,8 @@ WORKDIR /bedrock
 # Download Bedrock Dedicated Server
 COPY . .
 
-RUN unzip bedrock-server-1.21.90.4.zip && \
-    rm bedrock-server-1.21.90.4.zip && \
+RUN unzip bedrock-server* && \
+    rm bedrock-server* && \
     chmod +x bedrock_server
 
 # Accept EULA
